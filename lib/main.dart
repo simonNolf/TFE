@@ -53,7 +53,7 @@ class _MainPageState extends State<MainPage> {
       case NavigationItem.profile:
         return HeaderPage();
       case NavigationItem.demande_covoiturage:
-        return PeoplePage();
+        return CovoituragePage();
       case NavigationItem.favourites:
         return FavouritesPage();
       case NavigationItem.workflow:
