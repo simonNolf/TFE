@@ -18,11 +18,13 @@ Future main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Navigation Drawer';
+  static const String title = 'Navigation Drawer';
+
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
@@ -31,12 +33,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: title,
       theme: ThemeData(primarySwatch: Colors.deepOrange),
-      home: MainPage(),
+      home: const MainPage(),
     ),
   );
 }
 
 class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -51,19 +55,19 @@ class _MainPageState extends State<MainPage> {
 
     switch (navigationItem) {
       case NavigationItem.profile:
-        return HeaderPage();
-      case NavigationItem.demande_covoiturage:
-        return CovoituragePage();
+        return const HeaderPage();
+      case NavigationItem.demandeCovoiturage:
+        return const CovoituragePage();
       case NavigationItem.favourites:
-        return FavouritesPage();
+        return const FavouritesPage();
       case NavigationItem.workflow:
-        return WorkflowPage();
+        return const WorkflowPage();
       case NavigationItem.updates:
-        return UpdatesPage();
+        return const UpdatesPage();
       case NavigationItem.covoiturage:
-        return Covoiturage();
+        return const Covoiturage();
       case NavigationItem.notifications:
-        return NotificationsPage();
+        return const NotificationsPage();
     }
   }
 }

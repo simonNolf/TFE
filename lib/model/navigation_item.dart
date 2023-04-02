@@ -1,6 +1,6 @@
 enum NavigationItem {
   profile,
-  demande_covoiturage,
+  demandeCovoiturage,
   favourites,
   workflow,
   updates,

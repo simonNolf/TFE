@@ -3,12 +3,14 @@ import 'package:untitled/data/user.dart';
 import 'package:untitled/widget/navigation_drawer_widget.dart';
 
 class HeaderPage extends StatelessWidget {
+  const HeaderPage({super.key});
+
   @override
   Widget build(BuildContext context) => Scaffold(
-    drawer: NavigationDrawerWidget(),
+    drawer: const NavigationDrawerWidget(),
     appBar: AppBar(
       backgroundColor: Colors.pink,
-      title: Text(name),
+      title: const Text(name),
       centerTitle: true,
     ),
     body: Image.network(

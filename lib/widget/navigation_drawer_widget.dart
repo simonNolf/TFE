@@ -5,12 +5,14 @@ import 'package:untitled/model/navigation_item.dart';
 import 'package:untitled/provider/navigation_provider.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
-  static final padding = EdgeInsets.symmetric(horizontal: 20);
+  static const padding = EdgeInsets.symmetric(horizontal: 20);
+
+  const NavigationDrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) => Drawer(
     child: Container(
-      color: Color.fromRGBO(50, 55, 205, 1),
+      color: const Color.fromRGBO(50, 55, 205, 1),
       child: ListView(
         children: <Widget>[
           buildHeader(
@@ -26,7 +28,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                 const SizedBox(height: 24),
                 buildMenuItem(
                   context,
-                  item: NavigationItem.demande_covoiturage,
+                  item: NavigationItem.demandeCovoiturage,
                   text: 'demande_covoiturage',
                   icon: Icons.people,
                 ),
@@ -52,7 +54,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                   icon: Icons.update,
                 ),
                 const SizedBox(height: 24),
-                Divider(color: Colors.white70),
+                const Divider(color: Colors.white70),
                 const SizedBox(height: 24),
                 buildMenuItem(
                   context,
@@ -115,28 +117,28 @@ class NavigationDrawerWidget extends StatelessWidget {
         child: InkWell(
           onTap: () => selectItem(context, NavigationItem.profile),
           child: Container(
-            padding: padding.add(EdgeInsets.symmetric(vertical: 40)),
+            padding: padding.add(const EdgeInsets.symmetric(vertical: 40)),
             child: Row(
               children: [
                 CircleAvatar(
                     radius: 30, backgroundImage: NetworkImage(urlImage)),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       name,
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: const TextStyle(fontSize: 20, color: Colors.white),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       email,
-                      style: TextStyle(fontSize: 14, color: Colors.white),
+                      style: const TextStyle(fontSize: 14, color: Colors.white),
                     ),
                   ],
                 ),
-                Spacer(),
-                CircleAvatar(
+                const Spacer(),
+                const CircleAvatar(
                   radius: 24,
                   backgroundColor: Color.fromRGBO(30, 60, 168, 1),
                   child: Icon(Icons.add_comment_outlined, color: Colors.white),
